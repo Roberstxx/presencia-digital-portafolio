@@ -1,0 +1,122 @@
+.footer {
+  background: var(--color-secondary);
+  color: var(--color-text-on-dark);
+  padding: var(--spacing-2xl) 0 var(--spacing-lg);
+}
+
+.footer__content {
+  display: grid;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .footer__content {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--spacing-2xl);
+  }
+}
+
+.footer__brand {
+  max-width: 400px;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer__description {
+  color: var(--color-text-on-dark);
+  opacity: 0.8;
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer__copyright {
+  color: var(--color-text-on-dark);
+  opacity: 0.6;
+  font-size: var(--font-size-small);
+  margin: 0;
+}
+
+.footer__nav h4,
+.footer__social h4 {
+  color: var(--color-text-on-dark);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-body);
+}
+
+.footer__nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__nav li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer__nav a {
+  color: var(--color-text-on-dark);
+  opacity: 0.8;
+  transition: all var(--transition-fast);
+  font-size: var(--font-size-small);
+}
+
+.footer__nav a:hover {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+.footer__social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer__social-link {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-on-dark);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.footer__social-link:hover {
+  background: var(--color-accent);
+  color: var(--color-text-on-dark);
+  transform: translateY(-2px);
+}
+
+.footer__contact-info p {
+  color: var(--color-text-on-dark);
+  opacity: 0.7;
+  font-size: var(--font-size-small);
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer__contact-info p:last-child {
+  margin-bottom: 0;
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--spacing-lg);
+  text-align: center;
+}
+
+.footer__bottom p {
+  color: var(--color-text-on-dark);
+  opacity: 0.6;
+  font-size: var(--font-size-small);
+  margin: 0;
+}

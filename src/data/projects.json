@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "title": "Estética Línea",
+      "vercelUrl": "https://estetica-linea-demo.vercel.app",
+      "cover": "/projects/estetica-linea.jpg",
+      "description": "Landing con filtros y secciones informativas para centro de estética.",
+      "tags": ["React", "SEO", "Responsive"]
+    },
+    {
+      "title": "Restaurante Delicias",
+      "vercelUrl": "https://restaurante-delicias-demo.vercel.app",
+      "cover": "/projects/restaurante-delicias.jpg",
+      "description": "Menú digital y sistema de reservas para restaurante local.",
+      "tags": ["React", "Forms", "Menu Digital"]
+    },
+    {
+      "title": "Consultorio Dr. Martinez",
+      "vercelUrl": "https://consultorio-martinez-demo.vercel.app",
+      "cover": "/projects/consultorio-martinez.jpg",
+      "description": "Sitio profesional con información médica y sistema de citas.",
+      "tags": ["Landing", "Profesional", "Citas"]
+    },
+    {
+      "title": "Tienda Artesanías Maya",
+      "vercelUrl": "https://artesanias-maya-demo.vercel.app",
+      "cover": "/projects/artesanias-maya.jpg",
+      "description": "Tienda en línea con catálogo de productos artesanales locales.",
+      "tags": ["E-commerce", "Catálogo", "PayPal"]
+    },
+    {
+      "title": "Bufete Legal Campeche",
+      "vercelUrl": "https://bufete-legal-campeche-demo.vercel.app",
+      "cover": "/projects/bufete-legal.jpg",
+      "description": "Sitio corporativo con blog y formularios de contacto especializado.",
+      "tags": ["Corporativo", "Blog", "CMS"]
+    },
+    {
+      "title": "Gym Fitness Plus",
+      "vercelUrl": "https://gym-fitness-plus-demo.vercel.app",
+      "cover": "/projects/gym-fitness.jpg",
+      "description": "Landing con horarios, precios y sistema de inscripciones online.",
+      "tags": ["Fitness", "Inscripciones", "Responsive"]
+    }
+  ]
+}

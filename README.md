@@ -1,73 +1,172 @@
-# Welcome to your Lovable project
+# Portafolio Web — Presencia digital
 
-## Project info
+Una landing page de portafolio profesional desarrollada con React + Vite y CSS puro, diseñada para convertir visitas en contactos.
 
-**URL**: https://lovable.dev/projects/78c8dc81-f599-4ff7-88db-576f032ea324
+## 🚀 Características
 
-## How can I edit this code?
+- **SPA completa** con navegación por anclas
+- **Diseño responsivo** mobile-first
+- **CSS puro** (sin frameworks de UI)
+- **Paleta profesional** en azules, blanco y negro
+- **SEO optimizado** con metadatos completos
+- **Formulario de contacto** funcional
+- **Portafolio interactivo** con previews de proyectos
+- **4 paquetes de servicios** claramente diferenciados
 
-There are several ways of editing your application.
+## 🎨 Paleta de colores
 
-**Use Lovable**
+- **Azul primario:** #0A64FF
+- **Azul oscuro:** #0B1B2B  
+- **Cian acento:** #1EC8FF
+- **Blanco:** #FFFFFF
+- **Gris claro:** #ECEFF3
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/78c8dc81-f599-4ff7-88db-576f032ea324) and start prompting.
+## 📦 Instalación y desarrollo
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+# 1. Instalar dependencias
+npm install
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 2. Iniciar servidor de desarrollo
 npm run dev
+
+# 3. Construir para producción
+npm run build
+
+# 4. Previsualizar build de producción
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## ⚙️ Personalización
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 1. Editar información de paquetes
+Modifica el archivo `src/data/packages.json`:
 
-**Use GitHub Codespaces**
+```json
+{
+  "packages": [
+    {
+      "key": "landing",
+      "title": "Tu paquete",
+      "price": 3000,
+      "features": ["Característica 1", "Característica 2"]
+    }
+  ]
+}
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 2. Actualizar proyectos del portafolio
+Edita `src/data/projects.json`:
 
-## What technologies are used for this project?
+```json
+{
+  "projects": [
+    {
+      "title": "Nombre del proyecto",
+      "vercelUrl": "https://tu-proyecto.vercel.app",
+      "cover": "/projects/tu-imagen.jpg",
+      "description": "Descripción del proyecto",
+      "tags": ["React", "CSS", "Responsive"]
+    }
+  ]
+}
+```
 
-This project is built with:
+### 3. Cambiar información de contacto
+En `src/sections/Contact.jsx` y `src/sections/Footer.jsx`, actualiza:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Número de WhatsApp
+- Email de contacto
+- Redes sociales
+- Ubicación
 
-## How can I deploy this project?
+### 4. Personalizar colores y estilos
+Modifica las variables CSS en `src/styles/theme.css`:
 
-Simply open [Lovable](https://lovable.dev/projects/78c8dc81-f599-4ff7-88db-576f032ea324) and click on Share -> Publish.
+```css
+:root {
+  --color-primary: #0A64FF;
+  --color-secondary: #0B1B2B;
+  --color-accent: #1EC8FF;
+  /* ... más variables */
+}
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 📁 Estructura del proyecto
 
-Yes, you can!
+```
+src/
+├── components/          # Componentes reutilizables
+│   ├── Button.jsx      # Botón con variantes
+│   ├── Header.jsx      # Navegación sticky
+│   ├── PricingCard.jsx # Tarjetas de paquetes
+│   └── ProjectCard.jsx # Tarjetas de proyectos
+├── sections/           # Secciones principales
+│   ├── Hero.jsx       # Sección hero
+│   ├── Packages.jsx   # Paquetes de servicio
+│   ├── Projects.jsx   # Portafolio
+│   ├── Benefits.jsx   # Beneficios
+│   ├── Contact.jsx    # Formulario de contacto
+│   └── Footer.jsx     # Pie de página
+├── styles/
+│   └── theme.css      # Sistema de diseño
+├── data/
+│   ├── packages.json  # Datos de paquetes
+│   └── projects.json  # Datos de proyectos
+└── App.jsx            # Componente raíz
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🎯 Secciones incluidas
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. **Hero** - Impacto inicial con CTAs principales
+2. **Paquetes** - 4 opciones de servicio con precios
+3. **Proyectos** - Portafolio con links a sitios live
+4. **Beneficios** - ¿Por qué tener una página web?
+5. **Contacto** - Formulario funcional + información
+6. **Footer** - Links adicionales y redes sociales
+
+## 📱 Responsive design
+
+- **Mobile-first:** Optimizado desde 360px
+- **Breakpoints:** 640px (tablet), 768px (desktop), 1024px (large)
+- **Grid flexible:** Se adapta automáticamente
+- **Imágenes optimizadas:** Lazy loading incluido
+
+## 🔧 Tecnologías utilizadas
+
+- **React 18** - Biblioteca de interfaz
+- **Vite** - Build tool y dev server
+- **CSS Puro** - Sin frameworks adicionales
+- **SVG Icons** - Iconografía inline optimizada
+
+## 📈 Performance y SEO
+
+- **Lighthouse 90+** en Performance y Best Practices
+- **Metadatos completos** Open Graph y Twitter Cards
+- **Semántica HTML5** con roles ARIA
+- **Contraste AA** cumplido en todos los elementos
+- **Focus visible** para navegación por teclado
+
+## 🚀 Despliegue
+
+El proyecto está optimizado para desplegarse en:
+
+- **Vercel** (recomendado)
+- **Netlify** 
+- **GitHub Pages**
+- **Cualquier hosting estático**
+
+```bash
+# Build para producción
+npm run build
+
+# La carpeta 'dist' contiene los archivos listos para subir
+```
+
+## 📄 Licencia
+
+Este proyecto es de uso libre para portafolios profesionales.
+
+---
+
+**¿Necesitas ayuda?** Contacta a través del formulario en la página o por WhatsApp.

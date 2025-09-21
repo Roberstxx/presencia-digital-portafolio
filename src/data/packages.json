@@ -1,0 +1,53 @@
+{
+  "packages": [
+    {
+      "key": "landing",
+      "title": "Landing Page Básica",
+      "price": 3000,
+      "forWho": "Emprendedores y consultorios que necesitan presencia inmediata.",
+      "features": [
+        "1 página con 3–4 secciones",
+        "Botón a WhatsApp + mapa",
+        "SEO básico · Responsive",
+        "Entrega en menos de 7 días"
+      ]
+    },
+    {
+      "key": "pro",
+      "title": "Página Profesional (sin CMS)",
+      "priceMin": 6000,
+      "priceMax": 9000,
+      "forWho": "Negocios que requieren una presentación sólida.",
+      "features": [
+        "4–6 secciones (inicio, servicios, galería/menú, contacto…)",
+        "Formularios y animaciones ligeras",
+        "SEO intermedio · Responsive"
+      ],
+      "featured": true
+    },
+    {
+      "key": "cms",
+      "title": "Sitio con CMS",
+      "priceMin": 8000,
+      "priceMax": 15000,
+      "forWho": "Actualizaciones constantes: blog, noticias, promos.",
+      "features": [
+        "Hasta 8 secciones",
+        "CMS (blog / edición de textos e imágenes)",
+        "Analytics + SEO avanzado"
+      ]
+    },
+    {
+      "key": "ecommerce",
+      "title": "Tienda en Línea / Empresarial",
+      "priceMin": 15000,
+      "priceMax": 25000,
+      "forWho": "Vende online o gestiona procesos con seguridad.",
+      "features": [
+        "Carrito, pagos (MercadoPago/Stripe/PayPal)",
+        "Catálogo, inventario, roles de usuario",
+        "SSL, mejores prácticas de seguridad"
+      ]
+    }
+  ]
+}
