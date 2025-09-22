@@ -1,17 +1,26 @@
 /* Design System - Portafolio Web */
 
 :root {
-  /* Colors */
-  --color-primary: #0A64FF;
-  --color-secondary: #0B1B2B;
-  --color-accent: #1EC8FF;
+  /* Colors - Vibrant Palette */
+  --color-primary: #FF6B35;        /* Naranja vibrante */
+  --color-primary-light: #FF8F65;
+  --color-secondary: #1A1A2E;      /* Azul muy oscuro */
+  --color-accent: #00D9FF;         /* Cian brillante */
+  --color-accent-2: #7B68EE;       /* Púrpura vibrante */
+  --color-success: #00E676;        /* Verde brillante */
+  --color-warning: #FFD54F;        /* Amarillo dorado */
+  --color-gradient-1: linear-gradient(135deg, #FF6B35 0%, #00D9FF 100%);
+  --color-gradient-2: linear-gradient(135deg, #7B68EE 0%, #00E676 100%);
+  --color-gradient-3: linear-gradient(135deg, #FF6B35 0%, #7B68EE 50%, #00D9FF 100%);
   --color-neutral-light: #FFFFFF;
-  --color-neutral-mid: #ECEFF3;
-  --color-text-primary: #0B1B2B;
+  --color-neutral-mid: #F8F9FA;
+  --color-text-primary: #1A1A2E;
   --color-text-on-dark: #FFFFFF;
   --color-border: #E3E8EF;
-  --color-shadow: rgba(11, 27, 43, 0.1);
-  --color-shadow-hover: rgba(11, 27, 43, 0.15);
+  --color-shadow: rgba(255, 107, 53, 0.15);
+  --color-shadow-hover: rgba(255, 107, 53, 0.25);
+  --color-shadow-accent: rgba(0, 217, 255, 0.3);
+  --color-shadow-purple: rgba(123, 104, 238, 0.25);
 
   /* Typography */
   --font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', system-ui, sans-serif;
@@ -51,10 +60,12 @@
   --container-padding: var(--spacing-sm);
   --section-padding-y: var(--spacing-xl);
   
-  /* Transitions */
-  --transition-fast: 0.15s ease-out;
-  --transition-normal: 0.3s ease-out;
-  --transition-slow: 0.5s ease-out;
+  /* Transitions & Animations */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-elastic: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   /* Z-index */
   --z-header: 100;
@@ -235,8 +246,69 @@ a:focus {
   }
 }
 
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-10deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) rotate(5deg);
+  }
+  70% {
+    transform: scale(0.9) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--color-primary), 0 0 10px var(--color-primary), 0 0 15px var(--color-primary);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary), 0 0 30px var(--color-primary);
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
 /* Accessibility */

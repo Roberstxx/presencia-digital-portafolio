@@ -47,7 +47,8 @@
 }
 
 .hero__title-accent {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: var(--color-gradient-3);
+  animation: glow 3s ease-in-out infinite alternate;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -88,11 +89,13 @@
   }
 }
 
-.hero__trust-pills {
+.hero__trust {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
   justify-content: center;
+  margin-top: var(--spacing-lg);
+  animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 @media (min-width: 768px) {
@@ -105,9 +108,23 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xs) var(--spacing-sm);
   font-size: var(--font-size-small);
-  color: var(--color-primary);
+  color: var(--color-text-primary);
   font-weight: var(--font-weight-medium);
+  transition: all var(--transition-bounce);
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
+}
+
+.trust-pill:hover {
+  background: rgba(255, 107, 53, 0.1);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(255, 107, 53, 0.2);
+  border-color: var(--color-primary);
 }
 
 .hero__right {
@@ -137,13 +154,13 @@
 .mockup {
   position: absolute;
   border-radius: var(--border-radius-lg);
-  box-shadow: 0 20px 40px rgba(10, 100, 255, 0.1), 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px var(--color-shadow-accent), 0 4px 20px rgba(0, 0, 0, 0.08);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border: var(--border-width) solid rgba(10, 100, 255, 0.1);
+  border: var(--border-width) solid rgba(255, 107, 53, 0.2);
   transform-style: preserve-3d;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: mockupEntrance 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+  transition: all var(--transition-elastic);
+  animation: mockupEntrance 1.2s cubic-bezier(0.4, 0, 0.2, 1) both, animate-float;
 }
 
 .mockup--desktop {
@@ -156,8 +173,9 @@
 }
 
 .mockup--desktop:hover {
-  transform: translateY(-8px) rotateY(8deg) rotateX(-5deg);
-  box-shadow: 0 30px 60px rgba(10, 100, 255, 0.2), 0 8px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px) rotateY(8deg) rotateX(-5deg) scale(1.05);
+  box-shadow: 0 30px 60px var(--color-shadow-accent), 0 8px 40px rgba(255, 107, 53, 0.3);
+  border-color: var(--color-primary);
 }
 
 .mockup--mobile {
@@ -171,8 +189,9 @@
 }
 
 .mockup--mobile:hover {
-  transform: translateY(-8px) rotateY(-8deg) rotateX(5deg);
-  box-shadow: 0 30px 60px rgba(10, 100, 255, 0.2), 0 8px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px) rotateY(-8deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 30px 60px var(--color-shadow-accent), 0 8px 40px rgba(255, 107, 53, 0.3);
+  border-color: var(--color-primary);
 }
 
 .mockup__screen {
@@ -199,9 +218,10 @@
 
 .mockup__header {
   height: 20px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: var(--color-gradient-1);
   border-radius: var(--border-radius-sm);
   opacity: 0.8;
+  animation: animate-pulse;
 }
 
 .mockup__body {
